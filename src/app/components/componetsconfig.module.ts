@@ -6,9 +6,6 @@ import { AcercaNosotrosComponent } from './AcercaNosotros/acerca-nosotros/acerca
 import { CarritoDeseosComponent } from './CarritoDeseos/carrito-deseos/carrito-deseos.component';
 import { PasarelaComprasComponent } from './PasarelaCompras/pasarela-compras/pasarela-compras.component';
 import { LoginComponent } from './Login/login/login.component';
-import { RegistroComprasComponent } from './RegistroCompras/registro-compras/registro-compras.component';
-
-
 
 @NgModule({
   declarations: [
@@ -19,11 +16,20 @@ import { RegistroComprasComponent } from './RegistroCompras/registro-compras/reg
     CarritoDeseosComponent,
     PasarelaComprasComponent,
     LoginComponent,
-    RegistroComprasComponent
+  
   ],
   imports: [
     CommonModule,
-    
+  
+  ],
+  exports:[
+    RegistroUsuarioComponent,
+    DashboardPrincipalComponent,
+    AcercaNosotrosComponent,
+    CarritoDeseosComponent,
+    PasarelaComprasComponent,
+    LoginComponent,
   ]
+
 })
 export class ComponetsconfigModule { }
