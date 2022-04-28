@@ -6,6 +6,8 @@ import { AppRoutingModule } from '../app-routing.module';
 import { FooterComponent } from './Footer/footer/footer.component';
 import { NavigationComponent } from './navigation/navigation/navigation.component';
 import { RegisterComponent } from './Register/register/register.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GamesPageComponent } from './Games/games-page/games-page.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { RegisterComponent } from './Register/register/register.component';
     LoginComponent,
     NavigationComponent,
     FooterComponent,
-    RegisterComponent
+    RegisterComponent,
+    GamesPageComponent
   
   ],
   imports: [
     CommonModule,
-    
+    FormsModule,
+    ReactiveFormsModule
    
   ],
   exports:[
