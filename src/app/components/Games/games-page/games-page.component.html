@@ -1,364 +1,165 @@
 <div class="s008">
-  <form>
-    <div class="inner-form">
-      <div class="basic-search">
-        <div class="input-field">
-          <input id="search" type="text" placeholder="Ingrese el nombre del juego..." />
-          <div class="icon-wrap">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20"
-              height="20" viewBox="0 0 20 20">
-              <path d="M18.869 19.162l-5.943-6.484c1.339-1.401 2.075-3.233 2.075-5.178 0-2.003-0.78-3.887-2.197-5.303s-3.3-2.197-5.303-2.197-3.887 
-                        0.78-5.303 2.197-2.197 3.3-2.197 5.303 0.78 3.887 2.197 5.303 3.3 2.197 5.303 2.197c1.726 0 3.362-0.579 4.688-1.645l5.943 6.483c0.099
-                        0.108 0.233 0.162 0.369 0.162 0.121 0 0.242-0.043 0.338-0.131 0.204-0.187 0.217-0.503 0.031-0.706zM1 7.5c0-3.584 2.916-6.5 6.5-6.5s6.5
-                        2.916 6.5 6.5-2.916 6.5-6.5 6.5-6.5-2.916-6.5-6.5z"></path>
-            </svg>
+
+    <form>
+      <div class="inner-form">
+
+        <div class="basic-search">
+          <div class="input-field">
+            <input id="search" type="text" placeholder="Ingrese el nombre del juego..." />
+            <div class="icon-wrap">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+                <path d="M18.869 19.162l-5.943-6.484c1.339-1.401 2.075-3.233 2.075-5.178 0-2.003-0.78-3.887-2.197-5.303s-3.3-2.197-5.303-2.197-3.887 
+                0.78-5.303 2.197-2.197 3.3-2.197 5.303 0.78 3.887 2.197 5.303 3.3 2.197 5.303 2.197c1.726 0 3.362-0.579 4.688-1.645l5.943 6.483c0.099
+                0.108 0.233 0.162 0.369 0.162 0.121 0 0.242-0.043 0.338-0.131 0.204-0.187 0.217-0.503 0.031-0.706zM1 7.5c0-3.584 2.916-6.5 6.5-6.5s6.5
+                2.916 6.5 6.5-2.916 6.5-6.5 6.5-6.5-2.916-6.5-6.5z">
+               </path>
+              </svg>
+            </div>
           </div>
         </div>
-      </div>
 
       <div class="advance-search">
-        <span class="desc">Busqueda Avanzada</span>
-        <div class="row">
-          <!--Field de Categoria-->
-          <div class="input-field">
-            <div class="input-select">
-              <select data-trigger="" name="choices-single-defaul">
-                <option placeholder="" value="">Categoria</option>
-                <option>Accion</option>
-                <option>Aventura</option>
-                <option>Arcade</option>
-                <option>Deportes</option>
-                <option>Estrategia</option>
-                <option>Musicales</option>
-              </select>
+          <span class="desc">Busqueda Avanzada</span>
+          <div class="row">
+
+            <!--Field de Categoria-->
+            <div class="input-field">
+              <div class="input-select">
+                <select data-trigger="" name="choices-single-defaul">
+                  <option placeholder="" value="">Categoria</option>
+                  <option>Accion</option>
+                  <option>Aventura</option>
+                  <option>Battle Royal</option>
+                  <option>Deportes</option>
+                  <option>Shooter</option>
+                  <option>Arcade</option>
+                  <option>Terror</option>
+                </select>
+              </div>
+             </div>
+
+            <!--Field de OS Soportado-->
+            <div class="input-field">
+              <div class="input-select">
+                <select data-trigger="" name="choices-single-defaul">
+                  <option placeholder="" value="">OS Soportado</option>
+                  <option>Windows</option>
+                  <option>MacOS</option>
+                  <option>Linux</option>
+                  <option>VR</option>
+                </select>
+              </div>
             </div>
-          </div>
 
-          <!--Field de OS Soportado-->
-          <div class="input-field">
-            <div class="input-select">
-              <select data-trigger="" name="choices-single-defaul">
-                <option placeholder="" value="">OS Soportado</option>
-                <option>Windows</option>
-                <option>MacOS</option>
-                <option>Linux</option>
-                <option>VR</option>
-              </select>
+            <!--Field de Tipo de Juego-->
+            <div class="input-field">
+              <div class="input-select">
+                <select data-trigger="" name="choices-single-defaul">
+                  <option placeholder="" value="">Tipo de Juego</option>
+                  <option>Un jugador</option>
+                  <option>Multi-jugador</option>
+                  <option>Cualquiera</option>
+                </select>
+              </div>
             </div>
-          </div>
 
-          <!--Field de Tipo de Juego-->
-          <div class="input-field">
-            <div class="input-select">
-              <select data-trigger="" name="choices-single-defaul">
-                <option placeholder="" value="">Tipo de Juego</option>
-                <option>Un jugador</option>
-                <option>Multi-jugador</option>
-                <option>Cualquiera</option>
-              </select>
+          </div><!--Final de Categoria - Linea 1-->
+
+          <div class="row second">
+
+            <div class="input-field">
+              <div class="input-select">
+                <select data-trigger="" name="choices-single-defaul">
+                  <option placeholder="" value="">Año</option>
+                  <option>2022</option>
+                  <option>2019</option>
+                  <option>2018</option>
+                  <option>2017</option>
+                  <option>2016</option>
+                  <option>2015</option>
+                  <option>2014</option>
+                  <option>2013</option>
+                  <option>2012</option>
+                  <option>2011</option>
+                  <option>2010</option>
+                  <option>Cualquiera</option>
+                </select>
+              </div>
             </div>
-          </div>
-        </div>
-        <!--Final de Categoria - Linea 1-->
 
-        <div class="row second">
+          </div><!--Final de Categoria - Linea 2-->
 
-          <div class="input-field">
-            <div class="input-select">
-              <select data-trigger="" name="choices-single-defaul">
-                <option placeholder="" value="">Año</option>
-                <option>2022</option>
-                <option>2019</option>
-                <option>2018</option>
-                <option>2017</option>
-                <option>2016</option>
-                <option>2015</option>
-                <option>2014</option>
-                <option>2013</option>
-                <option>2012</option>
-                <option>2011</option>
-                <option>2010</option>
-                <option>Cualquiera</option>
-              </select>
-            </div>
-          </div>
+          <div class="row third">
+              <div class="input-field">
+                <div class="group-btn">
+                  <br>
+                  <button class="btn-delete" id="delete">Reset</button>
+                  <button class="btn-search">Search</button>
+                </div> <!--Final de botones-->
+  
+              </div>
+            </div><!--Final de Categoria - Linea 3-->
+  
+          
+        </div> <!--Final de Advanced Search-->
 
-          <div class="input-field">
-            <div class="input-select">
-              <select data-trigger="" name="choices-single-defaul">
-                <option placeholder="" value="">Precio</option>
-                <option>0$ - 15$</option>
-                <option>15$ - 35$</option>
-                <option>35$ - 60$</option>
-                <option>60$ - 100$</option>
-                <option>Cualquiera</option>
-              </select>
-            </div>
-          </div>
+       
+      <br><br>
 
-        </div>
-        <!--Final de Categoria - Linea 2-->
-
-        <div class="row third">
-          <div class="input-field">
-            <div class="result-count"><span>108 </span>results</div>
-            <div class="group-btn">
-              <button class="btn-delete" id="delete">Reset</button>
-              <button class="btn-search">Search</button>
-            </div>
-            <!--Final de botones-->
-          </div>
-        </div>
-      </div>
-      <!--Final de Categoria - Linea 3-->
-      <br />
-    </div>
-    <!--Final de Advanced Search-->
-
-    <!--
-        --------------------------------------------
-    -->
-
-    <!--
-        ------------------------------------------
-    -->
-    <!--
-        ------------------------------------------
-    -->
-    <!--
-        <section class="ftco-section">
-        -------------------------------------------
-    -->
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="table-wrap">
-            <table class="table">
-              <thead class="thead-primary">
+      <div class="container">
+          
+          <table style="width: 200%; height: 300px" class="table table-striped">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Categoria</th>
+                <th>OS Soportado</th>
+                <th>Tipo de Juego</th>
+                <th>Año</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>God of War</td>
+                <td>Aventura / Accion</td>
+                <td>PC, Xbox</td>
+                <td>Un jugador</td>
+                <td>2018</td>
+              </tr>
+              <tr>
+                <td>Call of Duty: Black Ops II</td>
+                <td>Shooter</td>
+                <td>PC, Xbox, PS</td>
+                <td>Multi-jugador</td>
+                <td>2012</td>
+              </tr>
+              <tr>
+                <td>Fortnite</td>
+                <td>Battle Royal</td>
+                <td>PC, Android, PS, Xbox, Nintendo</td>
+                <td>Un jugador</td>
+                <td>2017</td>
+              </tr>
+              <tr>
+                  <td>Apex</td>
+                  <td>Battle Royal</td>
+                  <td>PC, Xbox, Android, Nintendo, PS</td>
+                  <td>Un jugador</td>
+                  <td>2017</td>
+                </tr>
                 <tr>
-                  <th>&nbsp;</th>
-                  <th>Nombre</th>
-                  <th>Logo</th>
-                  <th>Categoria</th>
-                  <th>Precio</th>
-                  <th>OS Soportado</th>
-                  <th>Tipo de Juego</th>
-                  <th>&nbsp;</th>
-                </tr>
-              </thead>
-              <tbody>
-
-                <tr class="alert" role="alert">
-                  <td>
-                    <label class="checkbox-wrap checkbox-primary">
-                      <input type="checkbox" checked />
-                      <span class="checkmark"></span>
-                    </label>
-                  </td>
-
-                  <!--AGREGADO PARA NOMBRE-->
-                  <td>
-                    <div class="email">
-                      <span>God Of War </span>
-                      <span>
-                        Desarrollado por la empresa Santa Monica Studio
-                      </span>
-                    </div>
-                  </td>
-
-                  <td>
-                    <div class="img" style="background-image: url(images/product-1.png)">
-                    </div>
-                  </td>
-                  <td>
-                    <div class="email">
-                      <span>Aventura / Accion </span>
-                      <span> </span>
-                    </div>
-                  </td>
-                  <td>$44.99</td>
-
-                  <td class="quantity">
-                    <div class="input-group">
-                      <span>
-                        Windows / MacOS
-                      </span>
-                    </div>
-                  </td>
+                  <td>July</td>
+                  <td>Terror</td>
+                  <td>PC, VR</td>
                   <td>Un jugador</td>
-                  <td>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true"><i class="fa fa-close"></i></span>
-                    </button>
-                  </td>
+                  <td>2020</td>
                 </tr>
-
-                <tr class="alert" role="alert">
-                  <td>
-                    <label class="checkbox-wrap checkbox-primary">
-                      <input type="checkbox" />
-                      <span class="checkmark"></span>
-                    </label>
-                  </td>
-
-                  <!--AGREGADO PARA NOMBRE-->
-                  <td>
-                    <div class="email">
-                      <span>Call Of Duty: Black Ops II </span>
-                      <span>Treyarch</span>
-                    </div>
-                  </td>
-
-                  <td>
-                    <div class="img" style="background-image: url(images/product-2.png)"></div>
-                  </td>
-
-                  <td>
-                    <div class="email">
-                      <span>Shooter</span>
-                      <span></span>
-                    </div>
-                  </td>
-                  <td>$30.99</td>
-                  <td class="quantity">
-                    <div class="input-group">
-                      <span>Windows / PlayStation</span>
-                    </div>
-                  </td>
-                  <td>Multi-jugador</td>
-                  <td>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true"><i class="fa fa-close"></i></span>
-                    </button>
-                  </td>
-                </tr>
-
-                <tr class="alert" role="alert">
-                  <td>
-                    <label class="checkbox-wrap checkbox-primary">
-                      <input type="checkbox" />
-                      <span class="checkmark"></span>
-                    </label>
-                  </td>
-
-                  <!--AGREGADO PARA NOMBRE-->
-                  <td>
-                    <div class="email">
-                      <span>Fortnite </span>
-                      <span>Epic Games</span>
-                    </div>
-                  </td>
-
-                  <td>
-                    <div class="img" style="background-image: url(images/product-3.png)"></div>
-                  </td>
-                  <td>
-                    <div class="email">
-                      <span>Supervivencia / Battle Royal</span>
-                      <span></span>
-                    </div>
-                  </td>
-                  <td>$0</td>
-                  <td class="quantity">
-                    <div class="input-group">
-                      <span>
-                        Windows, MacOS, Android, PS, Xbox, Nintendo
-                      </span>
-                    </div>
-                  </td>
-                  <td>Un jugador</td>
-                  <td>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true"><i class="fa fa-close"></i></span>
-                    </button>
-                  </td>
-                </tr>
-
-                <tr class="alert" role="alert">
-                  <td>
-                    <label class="checkbox-wrap checkbox-primary">
-                      <input type="checkbox" />
-                      <span class="checkmark"></span>
-                    </label>
-                  </td>
-
-                  <!--AGREGADO PARA NOMBRE-->
-                  <td>
-                    <div class="email">
-                      <span>Apex </span>
-                      <span>Respawn Entertainment</span>
-                    </div>
-                  </td>
-
-                  <td>
-                    <div class="img" style="background-image: url(images/product-4.png)"></div>
-                  </td>
-                  <td>
-                    <div class="email">
-                      <span>Battle Royal </span>
-                      <span></span>
-                    </div>
-                  </td>
-                  <td>$0</td>
-                  <td class="quantity">
-                    <div class="input-group">
-                      <span>Windows, MacOS, Android, PS</span>
-                    </div>
-                  </td>
-                  <td>Un jugador</td>
-                  <td>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true"><i class="fa fa-close"></i></span>
-                    </button>
-                  </td>
-                </tr>
-
-                <tr class="alert" role="alert">
-                  <td class="border-bottom-0">
-                    <label class="checkbox-wrap checkbox-primary">
-                      <input type="checkbox" />
-                      <span class="checkmark"></span>
-                    </label>
-                  </td>
-
-                  <!--AGREGADO PARA NOMBRE-->
-                  <td>
-                    <div class="email">
-                      <span>Phasmophobia </span>
-                      <span>Kinetic Games</span>
-                    </div>
-                  </td>
-
-                  <td class="border-bottom-0">
-                    <div class="img" style="background-image: url(images/product-5.png)"></div>
-                  </td>
-                  <td class="border-bottom-0">
-                    <div class="email">
-                      <span>Terror </span>
-                      <span></span>
-                    </div>
-                  </td>
-                  <td class="border-bottom-0">$25.0</td>
-                  <td class="quantity border-bottom-0">
-                    <div class="input-group">
-                      <span>Windows, VR</span>
-                    </div>
-                  </td>
-                  <td class="border-bottom-0">Un jugador</td>
-                  <td class="border-bottom-0">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true"><i class="fa fa-close"></i></span>
-                    </button>
-                  </td>
-                </tr>
-
-              </tbody>
-            </table>
-          </div>
+            </tbody>
+          </table>
         </div>
-      </div>
+
     </div>
-    <!--</section>-->
-  </form>
-</div>
+    </form>
+  </div>
+
+
