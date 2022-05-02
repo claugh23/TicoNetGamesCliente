@@ -1,9 +1,9 @@
 export interface GamesModel{
-    _id?:number,
-    GameName:string,
-    GameDescription:string,
-    GameCategory:string
-    GameSize:string,
-    GamePrice:bigint
-    GameImage:string
+    _id?:Number,
+    gameName:string,
+    gameDescription:string,
+    gameCategory:string
+    gameSize:string,
+    gamePrice:Number,
+    gameImage:string
 }

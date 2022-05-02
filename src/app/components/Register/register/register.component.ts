@@ -38,6 +38,7 @@ export class RegisterComponent implements OnInit {
       phone: Number.parseInt(this.FormRegistration.get('Form_phone')?.value),
       mail: this.FormRegistration.get('Form_mail')?.value,
       password: this.FormRegistration.get('Form_password')?.value,
+      role:"User"
 
     }
 

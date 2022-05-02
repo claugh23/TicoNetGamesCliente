@@ -4,5 +4,6 @@ export interface UsersModel{
     phone:Number,
     mail:string,
     password:string,
+    role:string,
     date?:Date
 }
