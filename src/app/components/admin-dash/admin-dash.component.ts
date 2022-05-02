@@ -12,15 +12,19 @@ import { HttpErrorResponse } from "@angular/common/http";
 export class AdminDashComponent implements OnInit {
 
   SelectedGame: GamesModel[] = [];
-  GameId:any = 0;
+  GameId: any = 0;
   FormAddGame: FormGroup;
+  FormEditGame: FormGroup;
 
   StateUserForm: boolean = false;
   StateGamesForm: boolean = true;
   ListGames: GamesModel[] = [];
 
 
-  constructor(private FormGameBuilder: FormBuilder, private Ticonetserver: GamesServicesService) {
+  constructor(
+    private FormGameBuilder: FormBuilder,
+    private FormEditBuilder: FormBuilder,
+    private Ticonetserver: GamesServicesService) {
 
     this.FormAddGame = this.FormGameBuilder.group({
 
@@ -31,6 +35,14 @@ export class AdminDashComponent implements OnInit {
       form_gamePrice: new FormControl(),
       form_gameImageURL: new FormControl()
 
+    });
+
+    this.FormEditGame = this.FormEditBuilder.group({
+      formEdit_name: new FormControl(),
+      formEdit_description: new FormControl(),
+      formEdit_category: new FormControl(),
+      formEdit_size: new FormControl(),
+      formEdit_price: new FormControl()
     })
 
   }
@@ -39,8 +51,34 @@ export class AdminDashComponent implements OnInit {
 
     this.SelectedGame.pop();
     this.SelectedGame.push(game);
-    //console.log(this.SelectedGame);
 
+    this.FormEditGame.patchValue({ formEdit_name: this.SelectedGame[0].gameName })
+    this.FormEditGame.patchValue({ formEdit_description: this.SelectedGame[0].gameDescription })
+    this.FormEditGame.patchValue({ formEdit_category: this.SelectedGame[0].gameCategory })
+    this.FormEditGame.patchValue({ formEdit_price: this.SelectedGame[0].gamePrice })
+    this.FormEditGame.patchValue({ formEdit_size: this.SelectedGame[0].gameSize })
+
+  }
+
+  UpdateGames(updates: GamesModel) {
+
+    const finalUpdate: GamesModel = {
+      _id: this.SelectedGame[0]._id,
+      gameName: this.FormEditGame.get('formEdit_name')?.value,
+      gameDescription: this.FormEditGame.get('formEdit_description')?.value,
+      gameCategory: this.FormEditGame.get('formEdit_category')?.value,
+      gameImage: this.SelectedGame[0].gameImage,
+      gamePrice: this.FormEditGame.get('formEdit_price')?.value,
+      gameSize: this.FormEditGame.get('formEdit_size')?.value
+    }
+
+    this.Ticonetserver.PutGames(finalUpdate).subscribe((result: any) => {
+
+      alert(JSON.stringify(result.error.text))
+    }, (errorUpdate: HttpErrorResponse) => {
+
+      alert("ocurrio un error: " + '\n' + JSON.stringify(errorUpdate));
+    })
   }
 
   AddGame() {
@@ -74,7 +112,7 @@ export class AdminDashComponent implements OnInit {
     this.GameId = this.SelectedGame[0]._id;
 
     console.log(this.GameId);
-    
+
 
     this.Ticonetserver.DeleteGame(this.GameId).subscribe((result): any => {
 
@@ -98,6 +136,20 @@ export class AdminDashComponent implements OnInit {
 
       alert("Ocurrio un error al obtener los juegos: " + '\n' + JSON.stringify(errorGet))
     })
+  }
+
+  SwitchFormSelected() {
+
+    if (this.StateUserForm === false) {
+
+      this.StateGamesForm = false;
+      this.StateUserForm = true;
+    } else if (this.StateGamesForm === true) {
+
+      this.StateUserForm = false;
+      this.StateGamesForm = true;
+    }
+
   }
 
   ngOnInit() {

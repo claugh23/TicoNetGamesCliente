@@ -30,7 +30,7 @@ export class GamesServicesService {
         {
           'Content-type': 'application/json',
           'Authorization': JSON.stringify(localStorage.getItem('token')),
-          
+
 
         }
       )
@@ -38,14 +38,30 @@ export class GamesServicesService {
 
   }
 
-  DeleteGame(_id:string){
+  PutGames(update:GamesModel):Observable<GamesModel>{
 
-    return this.HttpRequest.delete<string>('http://localhost:4500/Games/'+_id, {
+    return this.HttpRequest.put<any>('http://localhost:4500/Games/UpdateGame/', update, {
       headers: new HttpHeaders(
         {
           'Content-type': 'application/json',
           'Authorization': JSON.stringify(localStorage.getItem('token')),
-          
+
+
+        }
+      )
+    });
+
+  }
+
+
+  DeleteGame(id: Number) {
+
+    return this.HttpRequest.delete<String>('http://localhost:4500/Games/DeleteGame/' + id, {
+      headers: new HttpHeaders(
+        {
+
+          'Authorization': JSON.stringify(localStorage.getItem('token')),
+
 
         }
       )
