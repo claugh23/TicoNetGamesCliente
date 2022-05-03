@@ -10,6 +10,7 @@ import { RegisterComponent } from './Register/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShoppingCartComponent } from './Cart/shopping-cart.component';
 import { GamesAdministradorComponent } from './GamesAdministrador/games-administrador/games-administrador.component';
+import { UsersAdministratorComponent } from './UsersAdministrator/users-administrator/users-administrator.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { GamesAdministradorComponent } from './GamesAdministrador/games-administ
     NavigationComponent,
     RegisterComponent,
     ShoppingCartComponent,
-    GamesAdministradorComponent
+    GamesAdministradorComponent,
+    UsersAdministratorComponent
   ],
   imports: [
     CommonModule,

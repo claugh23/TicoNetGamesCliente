@@ -6,10 +6,12 @@ import { GamesPageComponent } from './components/Games/games-page/games-page.com
 import { GamesAdministradorComponent } from './components/GamesAdministrador/games-administrador/games-administrador.component';
 import { LoginComponent } from './components/Login/login/login.component';
 import { RegisterComponent } from './components/Register/register/register.component';
+import { UsersAdministratorComponent } from './components/UsersAdministrator/users-administrator/users-administrator.component';
 
 const routes: Routes = [
 
   {path:'TicoNetAdministrador',component:GamesAdministradorComponent},
+  {path:'TicoNetUsers',component:UsersAdministratorComponent},
   {path:'Games',component:GamesPageComponent},
   {path:'Register',component:RegisterComponent},
   {path:'Login',component:LoginComponent},
