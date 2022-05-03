@@ -1,16 +1,17 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { GamesModel } from "../../Interfaces/GamesDTO";
-import { FormBuilder, FormControl, FormGroup } from "@angular/forms";
-import { GamesServicesService } from "../../Services/Games/games-services.service";
-import { HttpErrorResponse } from "@angular/common/http";
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { GamesModel } from 'src/app/Interfaces/GamesDTO';
+import { GamesServicesService } from 'src/app/Services/Games/games-services.service';
 
 @Component({
-  selector: 'app-admin-dash',
-  templateUrl: './admin-dash.component.html',
-  styleUrls: ['./admin-dash.component.css']
+  selector: 'app-games-administrador',
+  templateUrl: './games-administrador.component.html',
+  styleUrls: ['./games-administrador.component.css']
 })
-export class AdminDashComponent implements OnInit {
+export class GamesAdministradorComponent implements OnInit {
 
+ 
   SelectedGame: GamesModel[] = [];
   GameId: any = 0;
   FormAddGame: FormGroup;
@@ -156,5 +157,6 @@ export class AdminDashComponent implements OnInit {
 
     this.LoadGameList();
   }
+
 
 }

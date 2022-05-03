@@ -8,7 +8,8 @@ import { ComponetsconfigModule } from './components/componetsconfig.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
   ],
   imports: [
     ComponetsconfigModule,
