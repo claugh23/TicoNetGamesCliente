@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   GetPayload: any[] = [];
 
 
-  constructor(private FormLoginBuilder: FormBuilder, private Server: AuthServiceService, private routerNav: Router,private dashMain:DashboardPrincipalComponent) {
+  constructor(private FormLoginBuilder: FormBuilder, private Server: AuthServiceService, private routerNav: Router) {
 
     this.FormLogin = this.FormLoginBuilder.group({
 

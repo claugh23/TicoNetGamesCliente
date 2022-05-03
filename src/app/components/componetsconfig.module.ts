@@ -8,6 +8,7 @@ import { LoginComponent } from './Login/login/login.component';
 import { NavigationComponent } from './Navigation/navigation/navigation.component';
 import { RegisterComponent } from './Register/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ShoppingCartComponent } from './Cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     GamesPageComponent,
     LoginComponent,
     NavigationComponent,
-    RegisterComponent
-    
+    RegisterComponent,
+    ShoppingCartComponent
   ],
   imports: [
     CommonModule,
@@ -32,8 +33,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     GamesPageComponent,
     LoginComponent,
     NavigationComponent,
-    RegisterComponent
-   
+    RegisterComponent,
+    ShoppingCartComponent
   ]
 
 })

@@ -32,7 +32,7 @@ export class ShoppingServicesService {
 
   }
 
-  PutShoppingCart(update:ShoppingModel):Observable<ShoppingModel>{
+  PutShoppingCart(update: ShoppingModel): Observable<ShoppingModel> {
     return this.HttpRequest.put<any>(this.TicoNetServer + 'UpdateShopCart', update, {
       headers: new HttpHeaders(
         {

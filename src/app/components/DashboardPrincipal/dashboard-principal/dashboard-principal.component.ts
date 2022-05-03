@@ -32,7 +32,7 @@ export class DashboardPrincipalComponent implements OnInit {
     })
   }
 
-  ngOnInit() {
+  ngOnInit():void {
 
     this.LoadGameList()
 

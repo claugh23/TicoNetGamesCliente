@@ -12,10 +12,10 @@
 
         <nav class="main-menu">
             <ul>
-                <li *ngFor="let item of PayloadUser">
+                <li>
 
                     <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
-                       
+
                     </a>
 
                     <!-- Modal -->
@@ -52,7 +52,7 @@
                     </script>
 
                 </li>
-                <li><a href="#">Home</a></li>
+                <li><a href="/TicoNetGames">Home</a></li>
                 <li><a href="/Games">Games</a></li>
 
             </ul>
@@ -74,17 +74,17 @@
                         <div class="cata new">{{item.gameName}}</div>
                         <div>
                             <ul>
-                                <li>{{item.gameCategory}}</li>
-                                <li>{{item.gamePrice}}</li>
-                                <li>{{item.gameSize}}</li>
-                                <li>{{item.gameCategory}}</li>
+                                <li>{{item?.gameCategory}}</li>
+                                <li>{{item?.gamePrice}}</li>
+                                <li>{{item?.gameSize}}</li>
+                                <li>{{item?.gameCategory}}</li>
 
                             </ul>
                         </div>
                     </div>
                     <div class="rgi-content">
-                        <p>{{item.gameDescription}}</p>
-                        <img src="{{item.gameImage}}" alt="" width="250px" height="250px">
+                        <p>{{item?.gameDescription}}</p>
+                        <img src="{{item?.gameImage}}" alt="" width="250px" height="250px">
 
                         <a href="#" class="comment">3 Comments</a>
 
