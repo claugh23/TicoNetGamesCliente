@@ -38,18 +38,18 @@
           <!-- Button trigger modal -->
           <button type="button" class="btn btn-primary btn-sm buyBtn" data-toggle="modal" data-target="#modelId"
             (click)="AddGameToCart(item)">
-            Add To Cart
+            Buy Now
           </button>
 
           <!-- Modal -->
           <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
-              <form [formGroup]="FormEditGame" (ngSubmit)="UpdateGames(item)">
+              <form [formGroup]="FormBuyGame" (ngSubmit)="BuyGame(item)">
 
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title">Edit {{item?.gameName}}</h5>
+                    <h5 class="modal-title">Payment Details</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -57,40 +57,25 @@
                   <div class="modal-body">
                     <div class="container-fluid">
                       <div class="form-group">
-
-
-                        <button class="btn btn-outline-danger" (click)="DeleteGameNow()">Delete Game</button>
                         <hr>
-
-                        <h5>Name</h5>
+                        <h5>Card Holder</h5>
                         <input class="form-control" type="text" value="{{SelectedGame[0]?.gameName}}"
                           formControlName="formEdit_name">
-                        <h5>Description</h5>
+                        <h5>Email</h5>
+                        <textarea class="form-control" type="text" value="{{SelectedGame[0]?.gameDescription}}" cols="5"
+                                  rows="5" formControlName="formEdit_description"></textarea>
+                        <h5>Phone Number</h5>
                         <textarea class="form-control" type="text" value="{{SelectedGame[0]?.gameDescription}}" cols="5"
                           rows="5" formControlName="formEdit_description"></textarea>
-
-                        <h5>Category Game</h5>
-                        <select class="form-control" required formControlName="formEdit_category">
-                          <option value="Sandbox">Sandbox</option>
-                          <option value="Real-time strategy (RTS)">Real-time strategy (RTS)</option>
-                          <option value="Shooters (FPS and TPS)">Shooters (FPS and TPS)</option>
-                          <option value="Multiplayer online battle arena (MOBA)">Multiplayer online battle arena
-                            (MOBA)
-                          </option>
-                          <option value="Role-playing (RPG, ARPG, and More)">Role-playing (RPG, ARPG, and More)
-                          </option>
-                          <option value="Simulation and sports">Simulation and sports</option>
-                          <option value="Puzzlers and party games">Puzzlers and party games</option>
-                          <option value="Action-adventure">Action-adventure</option>
-                          <option value="Survival and horror">Survival and horror</option>
-                        </select>
-                        <h5>Size</h5>
+                        <h5>Billing Address</h5>
                         <input class="form-control" type="text" value="{{SelectedGame[0]?.gameSize}}"
                           formControlName="formEdit_size">
-                        <h5>Price</h5>
+                        <h5>Card Number</h5>
                         <input class="form-control" type="text" value="{{SelectedGame[0]?.gamePrice}}"
                           formControlName="formEdit_price">
-                        <h5>Cover URL</h5>
+                        <h5>Exp Date</h5>
+                        <input class="form-control" type="text" value="{{SelectedGame[0]?.gameImage}}" disabled>
+                        <h5>Price</h5>
                         <input class="form-control" type="text" value="{{SelectedGame[0]?.gameImage}}" disabled>
                       </div>
                     </div>
@@ -98,7 +83,7 @@
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="LoadGameList()">Close
                     </button>
-                    <button type="submit" class="btn btn-primary">Save Game</button>
+                    <button type="submit" class="btn btn-primary">Confirm Payment</button>
                   </div>
                 </div>
               </form>
