@@ -1,0 +1,21 @@
+td{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.headerNav {
+  height:60px;
+  background-color: black;
+}
+
+.gamesContainer {
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-top: 2%;
+  overflow-y: auto;
+  transition: all 0.5s;
+  background-color: #f8f8f8;
+}
+
+.buyBtn {
+  width: 100px;
+}

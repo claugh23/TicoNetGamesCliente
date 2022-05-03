@@ -1,16 +1,17 @@
-import {Component, OnInit} from '@angular/core';
-import {GamesModel} from "../../../Interfaces/GamesDTO";
-import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
-import {GamesServicesService} from "../../../Services/Games/games-services.service";
-import {HttpErrorResponse} from "@angular/common/http";
+import { Component, OnInit } from '@angular/core';
+import { ShoppingModel } from "../../Interfaces/ShoppingDTO";
+import { GamesModel } from "../../Interfaces/GamesDTO";
+import { FormBuilder, FormControl, FormGroup } from "@angular/forms";
+import { GamesServicesService } from "../../Services/Games/games-services.service";
+import { HttpErrorResponse } from "@angular/common/http";
 
 @Component({
-  selector: 'app-games-page',
-  templateUrl: './games-page.component.html',
-  styleUrls: ['./games-page.component.css']
+  selector: 'app-shopping-cart',
+  templateUrl: './shopping-cart.component.html',
+  styleUrls: ['./shopping-cart.component.css']
 })
+export class ShoppingCartComponent implements OnInit {
 
-export class GamesPageComponent implements OnInit {
   SelectedGame: GamesModel[] = [];
   GameId: any = 0;
   FormAddGame: FormGroup;
@@ -47,16 +48,16 @@ export class GamesPageComponent implements OnInit {
 
   }
 
-  AddGameToCart(game: GamesModel) {
+  CaptureGameSelection(game: GamesModel) {
 
     this.SelectedGame.pop();
     this.SelectedGame.push(game);
 
-    this.FormEditGame.patchValue({formEdit_name: this.SelectedGame[0].gameName})
-    this.FormEditGame.patchValue({formEdit_description: this.SelectedGame[0].gameDescription})
-    this.FormEditGame.patchValue({formEdit_category: this.SelectedGame[0].gameCategory})
-    this.FormEditGame.patchValue({formEdit_price: this.SelectedGame[0].gamePrice})
-    this.FormEditGame.patchValue({formEdit_size: this.SelectedGame[0].gameSize})
+    this.FormEditGame.patchValue({ formEdit_name: this.SelectedGame[0].gameName })
+    this.FormEditGame.patchValue({ formEdit_description: this.SelectedGame[0].gameDescription })
+    this.FormEditGame.patchValue({ formEdit_category: this.SelectedGame[0].gameCategory })
+    this.FormEditGame.patchValue({ formEdit_price: this.SelectedGame[0].gamePrice })
+    this.FormEditGame.patchValue({ formEdit_size: this.SelectedGame[0].gameSize })
 
   }
 
@@ -156,4 +157,5 @@ export class GamesPageComponent implements OnInit {
 
     this.LoadGameList();
   }
+
 }
