@@ -1,6 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UsersModel } from 'src/app/Interfaces/UsersDTO';
 import { AdministrationServiceService } from 'src/app/Services/Administration/administration-service.service';
 
@@ -24,13 +25,14 @@ export class UsersAdministratorComponent implements OnInit {
 
 
   constructor(
+    private routerNav: Router,
     private FormUserBuilder: FormBuilder,
     private FormEditBuilder: FormBuilder,
     private Ticonetserver: AdministrationServiceService) {
 
     this.FormAddUser = this.FormUserBuilder.group({
 
-      form_userId:new FormControl(),
+      form_userId: new FormControl(),
       form_userName: new FormControl(),
       form_userPhone: new FormControl(),
       form_userMail: new FormControl(),
@@ -106,7 +108,7 @@ export class UsersAdministratorComponent implements OnInit {
 
   DeleteUserNow() {
 
-   
+
     this.UserDNI = this.SelectedUser[0]._id;
 
     console.log(this.UserDNI);
@@ -136,7 +138,14 @@ export class UsersAdministratorComponent implements OnInit {
     })
   }
 
-  
+  LoadGamesDash() {
+
+    this.routerNav.navigateByUrl('/TicoNetAdministrador')
+  }
+  LoadUsersDash() {
+    this.routerNav.navigateByUrl('/TicoNetAdministrador')
+  }
+
   ngOnInit() {
 
     this.LoadUsersList();

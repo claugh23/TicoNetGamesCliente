@@ -3,6 +3,7 @@ import {GamesModel} from "../../../Interfaces/GamesDTO";
 import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 import {GamesServicesService} from "../../../Services/Games/games-services.service";
 import {HttpErrorResponse} from "@angular/common/http";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-games-page',
@@ -22,6 +23,7 @@ export class GamesPageComponent implements OnInit {
 
 
   constructor(
+    private routerNav:Router,
     private FormGameBuilder: FormBuilder,
     private FormEditBuilder: FormBuilder,
     private Ticonetserver: GamesServicesService) {
@@ -138,18 +140,11 @@ export class GamesPageComponent implements OnInit {
     })
   }
 
-  SwitchFormSelected() {
-
-    if (this.StateUserForm === false) {
-
-      this.StateGamesForm = false;
-      this.StateUserForm = true;
-    } else if (this.StateGamesForm === true) {
-
-      this.StateUserForm = false;
-      this.StateGamesForm = true;
-    }
-
+  LoadHome(){
+    this.routerNav.navigateByUrl('/TicoNetGames')
+  }
+  LoadGames(){
+    this.routerNav.navigateByUrl('/Games')
   }
 
   ngOnInit() {

@@ -1,6 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { GamesModel } from 'src/app/Interfaces/GamesDTO';
 import { GamesServicesService } from 'src/app/Services/Games/games-services.service';
 
@@ -23,6 +24,7 @@ export class GamesAdministradorComponent implements OnInit {
 
 
   constructor(
+    private routerNav:Router,
     private FormGameBuilder: FormBuilder,
     private FormEditBuilder: FormBuilder,
     private Ticonetserver: GamesServicesService) {
@@ -151,6 +153,13 @@ export class GamesAdministradorComponent implements OnInit {
       this.StateGamesForm = true;
     }
 
+  }
+  LoadGamesDash(){
+
+    this.routerNav.navigateByUrl('/TicoNetAdministrador')
+  }
+  LoadUsersDash(){
+    this.routerNav.navigateByUrl('/TicoNetUsers')
   }
 
   ngOnInit() {

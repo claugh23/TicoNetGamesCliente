@@ -1,6 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UsersModel } from 'src/app/Interfaces/UsersDTO';
 import { RegistrationServiceService } from 'src/app/Services/Registration/registration-service.service';
 
@@ -15,7 +16,7 @@ export class RegisterComponent implements OnInit {
 
   StateRegistration:Boolean = false;
 
-  constructor(private FormRegistrationBuilder: FormBuilder, private Server: RegistrationServiceService) {
+  constructor(private FormRegistrationBuilder: FormBuilder, private Server: RegistrationServiceService,private routerNav:Router) {
 
     this.FormRegistration = this.FormRegistrationBuilder.group({
 
@@ -60,6 +61,9 @@ export class RegisterComponent implements OnInit {
 
 
     })
+  }
+  LoadLogin(){
+    this.routerNav.navigateByUrl('/Login');
   }
 
   ngOnInit(): void {
