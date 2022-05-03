@@ -46,7 +46,7 @@ export class UsersAdministratorComponent implements OnInit {
       formEdit_phone: new FormControl(),
       formEdit_mail: new FormControl(),
       formEdit_password: new FormControl(),
-      formEdit_role: new FormControl()
+     
     })
 
   }
@@ -59,7 +59,7 @@ export class UsersAdministratorComponent implements OnInit {
     this.FormEditUser.patchValue({ formEdit_phone: this.SelectedUser[0].phone })
     this.FormEditUser.patchValue({ formEdit_mail: this.SelectedUser[0].mail })
     this.FormEditUser.patchValue({ formEdit_password: this.SelectedUser[0].password })
-    this.FormEditUser.patchValue({ formEdit_role: this.SelectedUser[0].role })
+    
 
   }
 

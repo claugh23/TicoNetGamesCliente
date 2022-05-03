@@ -11,6 +11,7 @@ export class AuthServiceService {
 
   EndpointAuthentication: string = 'http://localhost:4500/AuthenticationServer'
 
+  
 
 
   constructor(private HttpRequest: HttpClient) { }
@@ -22,6 +23,8 @@ export class AuthServiceService {
     return this.HttpRequest.post<CredentialModel>(this.EndpointAuthentication, user);
 
   }
+
+  
  
 
 }

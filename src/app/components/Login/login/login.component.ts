@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
       localStorage.setItem("payload", JSON.stringify(result))
       localStorage.setItem("CurrentRole", JSON.stringify(result.role))
       this.GetPayload.push(result)
-
+     
       if (this.GetPayload[0].role === "User") {
         this.routerNav.navigateByUrl("/TicoNetGames")
 
