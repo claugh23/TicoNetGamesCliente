@@ -59,24 +59,19 @@
                       <div class="form-group">
                         <hr>
                         <h5>Card Holder</h5>
-                        <input class="form-control" type="text" value="{{SelectedGame[0]?.gameName}}"
-                          formControlName="formEdit_name">
+                        <input class="form-control" type="text" value="">
                         <h5>Email</h5>
-                        <textarea class="form-control" type="text" value="{{SelectedGame[0]?.gameDescription}}" cols="5"
-                                  rows="5" formControlName="formEdit_description"></textarea>
+                        <input class="form-control" type="text" value="">
                         <h5>Phone Number</h5>
-                        <textarea class="form-control" type="text" value="{{SelectedGame[0]?.gameDescription}}" cols="5"
-                          rows="5" formControlName="formEdit_description"></textarea>
+                        <input class="form-control" type="text" value="">
                         <h5>Billing Address</h5>
-                        <input class="form-control" type="text" value="{{SelectedGame[0]?.gameSize}}"
-                          formControlName="formEdit_size">
-                        <h5>Card Number</h5>
-                        <input class="form-control" type="text" value="{{SelectedGame[0]?.gamePrice}}"
-                          formControlName="formEdit_price">
+                        <input class="form-control" type="text" value="">
+                        <h5> Card Number</h5>
+                        <input class="form-control" type="number" value="">
                         <h5>Exp Date</h5>
-                        <input class="form-control" type="text" value="{{SelectedGame[0]?.gameImage}}" disabled>
+                        <input class="form-control" type="date" value="">
                         <h5>Price</h5>
-                        <input class="form-control" type="text" value="{{SelectedGame[0]?.gameImage}}" disabled>
+                        <input class="form-control" type="text" value="$ {{SelectedGame[0]?.gamePrice}}" disabled>
                       </div>
                     </div>
                   </div>
@@ -84,6 +79,10 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="LoadGameList()">Close
                     </button>
                     <button type="submit" class="btn btn-primary">Confirm Payment</button>
+
+                    <div class="alert alert-success" role="alert" *ngIf="StateCompra">
+                      <strong>COMPRA REALIZADA EXITOSAMENTE</strong>
+                    </div>
                   </div>
                 </div>
               </form>

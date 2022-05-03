@@ -19,6 +19,7 @@ export class GamesPageComponent implements OnInit {
 
   StateUserForm: boolean = false;
   StateGamesForm: boolean = true;
+  StateCompra :boolean = false;
   ListGames: GamesModel[] = [];
 
 
@@ -76,10 +77,13 @@ export class GamesPageComponent implements OnInit {
 
     this.Ticonetserver.PutGames(finalUpdate).subscribe((result: any) => {
 
-      alert(JSON.stringify(result.error.text))
+      //alert(JSON.stringify(result.error.text))
+
+      
     }, (errorUpdate: HttpErrorResponse) => {
 
       alert("ocurrio un error: " + '\n' + JSON.stringify(errorUpdate));
+      this.StateCompra = true;
     })
   }
 
