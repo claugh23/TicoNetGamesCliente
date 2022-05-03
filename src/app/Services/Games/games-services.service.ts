@@ -12,8 +12,6 @@ export class GamesServicesService {
 
   TicoNetServer: string = 'http://localhost:4500/Games/'
 
-
-
   constructor(private HttpRequest: HttpClient) { }
 
   GetGames() {
@@ -52,7 +50,6 @@ export class GamesServicesService {
     });
 
   }
-
 
   DeleteGame(id: Number) {
 

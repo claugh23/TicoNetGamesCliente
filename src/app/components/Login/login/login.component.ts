@@ -5,6 +5,7 @@ import { CredentialModel } from 'src/app/Interfaces/CredentialsDTO.';
 import { AuthServiceService } from 'src/app/Services/Authentication/auth-service.service';
 import { Router } from "@angular/router";
 import { UsersModel } from "../../../Interfaces/UsersDTO";
+import { DashboardPrincipalComponent } from '../../DashboardPrincipal/dashboard-principal/dashboard-principal.component';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
   GetPayload: any[] = [];
 
 
-  constructor(private FormLoginBuilder: FormBuilder, private Server: AuthServiceService, private routerNav: Router) {
+  constructor(private FormLoginBuilder: FormBuilder, private Server: AuthServiceService, private routerNav: Router,private dashMain:DashboardPrincipalComponent) {
 
     this.FormLogin = this.FormLoginBuilder.group({
 
@@ -28,23 +29,27 @@ export class LoginComponent implements OnInit {
 
   }
 
-  AuthenticateUser() {
+  async AuthenticateUser() {
 
     const credentials: CredentialModel = {
       mail: this.FormLogin.get('Form_mail')?.value,
       password: this.FormLogin.get('Form_pass')?.value
     }
 
-    this.Server.PostCredentials(credentials).subscribe((result: any) => {
+    await this.Server.PostCredentials(credentials).subscribe((result: any) => {
 
-      localStorage.clear();
+      //this.dashMain.LoadUserPayload(result);
       localStorage.setItem("token", JSON.stringify(result.password))
-      localStorage.setItem("payload",JSON.stringify(result))
-
-      this.routerNav.navigateByUrl("/TicoNetAdministrador");
+      localStorage.setItem("payload", JSON.stringify(result))
+      localStorage.setItem("CurrentRole", JSON.stringify(result.role))
       this.GetPayload.push(result)
 
+      if (this.GetPayload[0].role === "User") {
+        this.routerNav.navigateByUrl("/TicoNetGames")
 
+      } else if (this.GetPayload[0].role === "Administrador") {
+        this.routerNav.navigateByUrl("/TicoNetAdministrador")
+      }
 
 
 
@@ -61,9 +66,11 @@ export class LoginComponent implements OnInit {
       }
     })
 
+
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    localStorage.clear();
   }
 
 }

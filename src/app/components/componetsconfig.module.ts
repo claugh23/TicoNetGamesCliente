@@ -18,8 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     NavigationComponent,
     RegisterComponent
-   
-  
+    
   ],
   imports: [
     CommonModule,

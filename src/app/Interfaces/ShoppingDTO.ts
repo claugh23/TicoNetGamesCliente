@@ -7,4 +7,5 @@ export interface ShoppingModel{
     CreditCard:bigint,
     CreditCardExpiration:Date,
     Price:bigint
+    
 }
