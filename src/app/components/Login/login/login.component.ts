@@ -69,6 +69,11 @@ export class LoginComponent implements OnInit {
 
   }
 
+  LoadRegister(){
+
+    this.routerNav.navigateByUrl('/Register')
+  }
+
   ngOnInit() {
     localStorage.clear();
   }
