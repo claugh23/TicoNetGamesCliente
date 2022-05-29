@@ -9,7 +9,7 @@ import { UsersModel } from 'src/app/Interfaces/UsersDTO';
 })
 export class AuthServiceService {
 
-  EndpointAuthentication: string = 'http://localhost:4500/AuthenticationServer'
+  EndpointAuthentication: string = 'https://tico-net-games-server.herokuapp.com/AuthenticationServer'
 
   
 

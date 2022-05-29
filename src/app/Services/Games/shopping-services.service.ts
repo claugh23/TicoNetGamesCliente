@@ -10,7 +10,7 @@ import { ShoppingModel } from "../../Interfaces/ShoppingDTO";
 export class ShoppingServicesService {
 
 
-  TicoNetServer: string = 'http://localhost:4500/Shoppings/'
+  TicoNetServer: string = 'https://tico-net-games-server.herokuapp.com/Shoppings/'
 
 
 

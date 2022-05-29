@@ -10,7 +10,7 @@ import { GamesModel } from "../../Interfaces/GamesDTO";
 export class GamesServicesService {
 
 
-  TicoNetServer: string = 'http://localhost:4500/Games/'
+  TicoNetServer: string = 'https://tico-net-games-server.herokuapp.com/Games/'
 
   constructor(private HttpRequest: HttpClient) { }
 
@@ -23,7 +23,7 @@ export class GamesServicesService {
 
     //console.log(localStorage.getItem('token'))
 
-    return this.HttpRequest.post<GamesModel>('http://localhost:4500/Games/CreateGame/', game, {
+    return this.HttpRequest.post<GamesModel>('https://tico-net-games-server.herokuapp.com/Games/CreateGame/', game, {
       headers: new HttpHeaders(
         {
           'Content-type': 'application/json',
@@ -38,7 +38,7 @@ export class GamesServicesService {
 
   PutGames(update:GamesModel):Observable<GamesModel>{
 
-    return this.HttpRequest.put<any>('http://localhost:4500/Games/UpdateGame/', update, {
+    return this.HttpRequest.put<any>('https://tico-net-games-server.herokuapp.com/Games/UpdateGame/', update, {
       headers: new HttpHeaders(
         {
           'Content-type': 'application/json',
@@ -53,7 +53,7 @@ export class GamesServicesService {
 
   DeleteGame(id: Number) {
 
-    return this.HttpRequest.delete<String>('http://localhost:4500/Games/DeleteGame/' + id, {
+    return this.HttpRequest.delete<String>('https://tico-net-games-server.herokuapp.com/Games/DeleteGame/' + id, {
       headers: new HttpHeaders(
         {
 

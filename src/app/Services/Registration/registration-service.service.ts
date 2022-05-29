@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class RegistrationServiceService {
 
-  EndpointRegistration: string = 'http://localhost:4500/Users/CreateUser'
+  EndpointRegistration: string = 'https://tico-net-games-server.herokuapp.com/Users/CreateUser'
 
   constructor(private HttpRequest: HttpClient) { }
 
