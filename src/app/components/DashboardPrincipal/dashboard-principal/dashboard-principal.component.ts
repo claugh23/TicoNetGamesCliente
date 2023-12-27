@@ -1,6 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { GamesModel } from 'src/app/Interfaces/GamesDTO';
 import { UsersModel } from 'src/app/Interfaces/UsersDTO';
@@ -22,20 +22,20 @@ export class DashboardPrincipalComponent implements OnInit {
   StateEditProfile: boolean;
   StateViewProfile: boolean;
 
-  FormEditUser: UntypedFormGroup;
+  FormEditUser: FormGroup;
 
 
   constructor(
-    private FormEditBuilder: UntypedFormBuilder,
+    private FormEditBuilder: FormBuilder,
     private Ticonetserver: GamesServicesService,
     private routerNav: Router,
     private ServerUsers: AdministrationServiceService) {
     this.FormEditUser = this.FormEditBuilder.group({
-      formEdit_name: new UntypedFormControl(),
-      formEdit_phone: new UntypedFormControl(),
-      formEdit_mail: new UntypedFormControl(),
-      formEdit_password: new UntypedFormControl(),
-      formEdit_role: new UntypedFormControl()
+      formEdit_name: new FormControl(),
+      formEdit_phone: new FormControl(),
+      formEdit_mail: new FormControl(),
+      formEdit_password: new FormControl(),
+      formEdit_role: new FormControl()
     })
 
     this.StateViewProfile = true;
