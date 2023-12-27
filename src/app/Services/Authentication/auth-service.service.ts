@@ -9,7 +9,7 @@ import { UsersModel } from 'src/app/Interfaces/UsersDTO';
 })
 export class AuthServiceService {
 
-  EndpointAuthentication: string = 'https://tico-net-games-server.herokuapp.com/AuthenticationServer'
+  EndpointAuthentication: string = 'https://app-a0ef9e3e-13ba-490e-a25d-5691fc931664.cleverapps.io/AuthenticationServer'
 
   
 
