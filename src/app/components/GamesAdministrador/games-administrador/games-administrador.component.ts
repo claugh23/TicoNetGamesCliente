@@ -1,6 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { GamesModel } from 'src/app/Interfaces/GamesDTO';
 import { GamesServicesService } from 'src/app/Services/Games/games-services.service';
@@ -15,8 +15,8 @@ export class GamesAdministradorComponent implements OnInit {
  
   SelectedGame: GamesModel[] = [];
   GameId: any = 0;
-  FormAddGame: FormGroup;
-  FormEditGame: FormGroup;
+  FormAddGame: UntypedFormGroup;
+  FormEditGame: UntypedFormGroup;
 
   StateUserForm: boolean = false;
   StateGamesForm: boolean = true;
@@ -25,27 +25,27 @@ export class GamesAdministradorComponent implements OnInit {
 
   constructor(
     private routerNav:Router,
-    private FormGameBuilder: FormBuilder,
-    private FormEditBuilder: FormBuilder,
+    private FormGameBuilder: UntypedFormBuilder,
+    private FormEditBuilder: UntypedFormBuilder,
     private Ticonetserver: GamesServicesService) {
 
     this.FormAddGame = this.FormGameBuilder.group({
 
-      form_gameName: new FormControl(),
-      form_gameDescription: new FormControl(),
-      form_gameCategory: new FormControl(),
-      form_gameSize: new FormControl(),
-      form_gamePrice: new FormControl(),
-      form_gameImageURL: new FormControl()
+      form_gameName: new UntypedFormControl(),
+      form_gameDescription: new UntypedFormControl(),
+      form_gameCategory: new UntypedFormControl(),
+      form_gameSize: new UntypedFormControl(),
+      form_gamePrice: new UntypedFormControl(),
+      form_gameImageURL: new UntypedFormControl()
 
     });
 
     this.FormEditGame = this.FormEditBuilder.group({
-      formEdit_name: new FormControl(),
-      formEdit_description: new FormControl(),
-      formEdit_category: new FormControl(),
-      formEdit_size: new FormControl(),
-      formEdit_price: new FormControl()
+      formEdit_name: new UntypedFormControl(),
+      formEdit_description: new UntypedFormControl(),
+      formEdit_category: new UntypedFormControl(),
+      formEdit_size: new UntypedFormControl(),
+      formEdit_price: new UntypedFormControl()
     })
 
   }

@@ -1,6 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsersModel } from 'src/app/Interfaces/UsersDTO';
 import { RegistrationServiceService } from 'src/app/Services/Registration/registration-service.service';
@@ -12,19 +12,19 @@ import { RegistrationServiceService } from 'src/app/Services/Registration/regist
 })
 export class RegisterComponent implements OnInit {
 
-  FormRegistration: FormGroup;
+  FormRegistration: UntypedFormGroup;
 
   StateRegistration:Boolean = false;
 
-  constructor(private FormRegistrationBuilder: FormBuilder, private Server: RegistrationServiceService,private routerNav:Router) {
+  constructor(private FormRegistrationBuilder: UntypedFormBuilder, private Server: RegistrationServiceService,private routerNav:Router) {
 
     this.FormRegistration = this.FormRegistrationBuilder.group({
 
-      Form_id: new FormControl(),
-      Form_name: new FormControl(),
-      Form_phone: new FormControl(),
-      Form_mail: new FormControl(),
-      Form_password: new FormControl(),
+      Form_id: new UntypedFormControl(),
+      Form_name: new UntypedFormControl(),
+      Form_phone: new UntypedFormControl(),
+      Form_mail: new UntypedFormControl(),
+      Form_password: new UntypedFormControl(),
 
     })
 

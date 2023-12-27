@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {GamesModel} from "../../../Interfaces/GamesDTO";
-import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
+import {UntypedFormBuilder, UntypedFormControl, UntypedFormGroup} from "@angular/forms";
 import {GamesServicesService} from "../../../Services/Games/games-services.service";
 import {HttpErrorResponse} from "@angular/common/http";
 import { Router } from '@angular/router';
@@ -15,7 +15,7 @@ export class GamesPageComponent implements OnInit {
   SelectedGame: GamesModel[] = [];
   GameId: any = 0;
   // FormAddGame: FormGroup;
-  FormBuyGame: FormGroup;
+  FormBuyGame: UntypedFormGroup;
 
   StateUserForm: boolean = false;
   StateGamesForm: boolean = true;
@@ -25,8 +25,8 @@ export class GamesPageComponent implements OnInit {
 
   constructor(
     private routerNav:Router,
-    private FormGameBuilder: FormBuilder,
-    private FormEditBuilder: FormBuilder,
+    private FormGameBuilder: UntypedFormBuilder,
+    private FormEditBuilder: UntypedFormBuilder,
     private Ticonetserver: GamesServicesService) {
 
     // this.FormAddGame = this.FormGameBuilder.group({
@@ -41,11 +41,11 @@ export class GamesPageComponent implements OnInit {
     // });
 
     this.FormBuyGame = this.FormEditBuilder.group({
-      formEdit_name: new FormControl(),
-      formEdit_description: new FormControl(),
-      formEdit_category: new FormControl(),
-      formEdit_size: new FormControl(),
-      formEdit_price: new FormControl()
+      formEdit_name: new UntypedFormControl(),
+      formEdit_description: new UntypedFormControl(),
+      formEdit_category: new UntypedFormControl(),
+      formEdit_size: new UntypedFormControl(),
+      formEdit_price: new UntypedFormControl()
     })
 
   }
