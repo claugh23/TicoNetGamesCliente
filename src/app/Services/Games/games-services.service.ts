@@ -10,7 +10,7 @@ import { GamesModel } from "../../Interfaces/GamesDTO";
 export class GamesServicesService {
 
 
-  TicoNetServer: string = 'https://tico-net-games-server.herokuapp.com/Games/'
+  TicoNetServer: string = 'https://app-a0ef9e3e-13ba-490e-a25d-5691fc931664.cleverapps.io/Games/'
 
   constructor(private HttpRequest: HttpClient) { }
 
