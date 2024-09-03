@@ -10,7 +10,9 @@ import { ShoppingModel } from "../../Interfaces/ShoppingDTO";
 export class ShoppingServicesService {
 
 
+
   TicoNetServer: string = 'https://ticonetgamesserver.onrender.com/Shoppings/'
+
 
 
 

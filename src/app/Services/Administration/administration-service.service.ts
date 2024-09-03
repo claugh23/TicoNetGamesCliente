@@ -8,7 +8,9 @@ import { Observable } from "rxjs";
 })
 export class AdministrationServiceService {
 
+
   TicoNetServer: string = 'https://ticonetgamesserver.onrender.com/Users/'
+
 
   constructor(private HttpRequest: HttpClient) { }
   GetUsers() {

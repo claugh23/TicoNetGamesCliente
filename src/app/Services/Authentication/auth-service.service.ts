@@ -8,6 +8,7 @@ import { CredentialModel } from 'src/app/Interfaces/CredentialsDTO.';
 })
 export class AuthServiceService {
 
+
   EndpointAuthentication: string = 'https:/ticonetgamesserver.onrender.com/AuthenticationServer'
 
 

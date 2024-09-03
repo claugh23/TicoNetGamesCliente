@@ -8,7 +8,9 @@ import { Observable } from 'rxjs';
 })
 export class RegistrationServiceService {
 
+
   EndpointRegistration: string = 'https://ticonetgamesserver.onrender.com/Users/CreateUser'
+
 
   constructor(private HttpRequest: HttpClient) { }
 

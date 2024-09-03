@@ -1,6 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { CredentialModel } from 'src/app/Interfaces/CredentialsDTO.';
 import { AuthServiceService } from 'src/app/Services/Authentication/auth-service.service';
 import { Router } from "@angular/router";
@@ -15,16 +15,16 @@ import { DashboardPrincipalComponent } from '../../DashboardPrincipal/dashboard-
 export class LoginComponent implements OnInit {
 
 
-  FormLogin: FormGroup;
+  FormLogin: UntypedFormGroup;
   GetPayload: any[] = [];
 
 
-  constructor(private FormLoginBuilder: FormBuilder, private Server: AuthServiceService, private routerNav: Router) {
+  constructor(private FormLoginBuilder: UntypedFormBuilder, private Server: AuthServiceService, private routerNav: Router) {
 
     this.FormLogin = this.FormLoginBuilder.group({
 
-      Form_mail: new FormControl(),
-      Form_pass: new FormControl()
+      Form_mail: new UntypedFormControl(),
+      Form_pass: new UntypedFormControl()
     })
 
   }

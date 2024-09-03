@@ -10,7 +10,9 @@ import { GamesModel } from "../../Interfaces/GamesDTO";
 export class GamesServicesService {
 
 
+
   TicoNetServer: string = 'https://ticonetgamesserver.onrender.com/Games/'
+
 
   constructor(private HttpRequest: HttpClient) { }
 
