@@ -10,7 +10,7 @@ import { ShoppingModel } from "../../Interfaces/ShoppingDTO";
 export class ShoppingServicesService {
 
 
-  TicoNetServer: string = 'https://app-a0ef9e3e-13ba-490e-a25d-5691fc931664.cleverapps.io/Shoppings/'
+  TicoNetServer: string = 'https://ticonetgamesserver.onrender.com/Shoppings/'
 
 
 

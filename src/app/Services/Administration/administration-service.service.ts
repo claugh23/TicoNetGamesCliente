@@ -8,7 +8,7 @@ import { Observable } from "rxjs";
 })
 export class AdministrationServiceService {
 
-  TicoNetServer: string = 'https://tico-net-games-server.herokuapp.com/Users/'
+  TicoNetServer: string = 'https://ticonetgamesserver.onrender.com/Users/'
 
   constructor(private HttpRequest: HttpClient) { }
   GetUsers() {
