@@ -10,7 +10,9 @@ import { GamesModel } from "../../Interfaces/GamesDTO";
 export class GamesServicesService {
 
 
-  TicoNetServer: string = 'https://app-a0ef9e3e-13ba-490e-a25d-5691fc931664.cleverapps.io/Games/'
+
+  TicoNetServer: string = 'https://ticonetgamesserver.onrender.com/Games/'
+
 
   constructor(private HttpRequest: HttpClient) { }
 
@@ -23,7 +25,7 @@ export class GamesServicesService {
 
     //console.log(localStorage.getItem('token'))
 
-    return this.HttpRequest.post<GamesModel>('https://tico-net-games-server.herokuapp.com/Games/CreateGame/', game, {
+    return this.HttpRequest.post<GamesModel>('https://ticonetgamesserver.onrender.com/Games/CreateGame/', game, {
       headers: new HttpHeaders(
         {
           'Content-type': 'application/json',
@@ -38,7 +40,7 @@ export class GamesServicesService {
 
   PutGames(update:GamesModel):Observable<GamesModel>{
 
-    return this.HttpRequest.put<any>('https://tico-net-games-server.herokuapp.com/Games/UpdateGame/', update, {
+    return this.HttpRequest.put<any>('https://ticonetgamesserver.onrender.com/Games/UpdateGame/', update, {
       headers: new HttpHeaders(
         {
           'Content-type': 'application/json',
@@ -53,7 +55,7 @@ export class GamesServicesService {
 
   DeleteGame(id: Number) {
 
-    return this.HttpRequest.delete<String>('https://tico-net-games-server.herokuapp.com/Games/DeleteGame/' + id, {
+    return this.HttpRequest.delete<String>('https://ticonetgamesserver.onrender.com/Games/DeleteGame/' + id, {
       headers: new HttpHeaders(
         {
 
