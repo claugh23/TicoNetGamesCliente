@@ -9,8 +9,8 @@ import { CredentialModel } from 'src/app/Interfaces/CredentialsDTO.';
 export class AuthServiceService {
 
 
-  //EndpointAuthentication: string = 'https://ticonetgamesserver.onrender.com/api/v1/AuthenticationServer'
-  EndpointAuthentication: string = 'http://localhost:8090/api/v1/AuthenticationServer'
+  EndpointAuthentication: string = 'https://ticonetgamesserver.onrender.com/api/v1/AuthenticationServer'
+  //EndpointAuthentication: string = 'http://localhost:8090/api/v1/AuthenticationServer'
 
   constructor(private HttpRequest: HttpClient) { }
 
