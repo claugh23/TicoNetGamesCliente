@@ -11,7 +11,7 @@ export class ShoppingServicesService {
 
 
 
-  TicoNetServer: string = 'https://ticonetgamesserver.onrender.com/Shoppings/'
+  TicoNetServer: string = 'https://ticonetgamesserver.onrender.com/api/v1/Shoppings/'
 
 
 

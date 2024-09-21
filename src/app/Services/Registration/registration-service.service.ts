@@ -9,14 +9,14 @@ import { Observable } from 'rxjs';
 export class RegistrationServiceService {
 
 
-  EndpointRegistration: string = 'https://ticonetgamesserver.onrender.com/Users/CreateUser'
+  EndpointRegistration: string = 'https://ticonetgamesserver.onrender.com/api/v1/Users/'
 
 
   constructor(private HttpRequest: HttpClient) { }
 
   PostUser(user: UsersModel): Observable<UsersModel> {
 
-    return this.HttpRequest.post<UsersModel>(this.EndpointRegistration, user);
+    return this.HttpRequest.post<UsersModel>(this.EndpointRegistration + "CreateUser", user);
 
   }
 }

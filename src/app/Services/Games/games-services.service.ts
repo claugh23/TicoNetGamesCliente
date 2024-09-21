@@ -11,7 +11,7 @@ export class GamesServicesService {
 
 
 
-  TicoNetServer: string = 'https://ticonetgamesserver.onrender.com/Games/'
+  TicoNetServer: string = 'https://ticonetgamesserver.onrender.com/api/v1/Games/'
 
 
   constructor(private HttpRequest: HttpClient) { }
@@ -25,7 +25,7 @@ export class GamesServicesService {
 
     //console.log(localStorage.getItem('token'))
 
-    return this.HttpRequest.post<GamesModel>('https://ticonetgamesserver.onrender.com/Games/CreateGame/', game, {
+    return this.HttpRequest.post<GamesModel>(this.TicoNetServer + 'CreateGame/', game, {
       headers: new HttpHeaders(
         {
           'Content-type': 'application/json',
@@ -40,7 +40,7 @@ export class GamesServicesService {
 
   PutGames(update:GamesModel):Observable<GamesModel>{
 
-    return this.HttpRequest.put<any>('https://ticonetgamesserver.onrender.com/Games/UpdateGame/', update, {
+    return this.HttpRequest.put<any>(this.TicoNetServer +'UpdateGame/', update, {
       headers: new HttpHeaders(
         {
           'Content-type': 'application/json',
@@ -55,7 +55,7 @@ export class GamesServicesService {
 
   DeleteGame(id: Number) {
 
-    return this.HttpRequest.delete<String>('https://ticonetgamesserver.onrender.com/Games/DeleteGame/' + id, {
+    return this.HttpRequest.delete<String>(this.TicoNetServer +'DeleteGame/' + id, {
       headers: new HttpHeaders(
         {
 

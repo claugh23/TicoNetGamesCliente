@@ -1,6 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsersModel } from 'src/app/Interfaces/UsersDTO';
 import { AdministrationServiceService } from 'src/app/Services/Administration/administration-service.service';
@@ -16,8 +16,8 @@ export class UsersAdministratorComponent implements OnInit {
 
   SelectedUser: UsersModel[] = [];
   UserDNI: any = 0;
-  FormAddUser: UntypedFormGroup;
-  FormEditUser: UntypedFormGroup;
+  FormAddUser: FormGroup;
+  FormEditUser: FormGroup;
 
   StateUserForm: boolean = false;
   StateGamesForm: boolean = true;
@@ -26,26 +26,26 @@ export class UsersAdministratorComponent implements OnInit {
 
   constructor(
     private routerNav: Router,
-    private FormUserBuilder: UntypedFormBuilder,
-    private FormEditBuilder: UntypedFormBuilder,
+    private FormUserBuilder: FormBuilder,
+    private FormEditBuilder: FormBuilder,
     private Ticonetserver: AdministrationServiceService) {
 
     this.FormAddUser = this.FormUserBuilder.group({
 
-      form_userId: new UntypedFormControl(),
-      form_userName: new UntypedFormControl(),
-      form_userPhone: new UntypedFormControl(),
-      form_userMail: new UntypedFormControl(),
-      form_userPassword: new UntypedFormControl(),
-      form_userRole: new UntypedFormControl(),
+      form_userId: new FormControl(),
+      form_userName: new FormControl(),
+      form_userPhone: new FormControl(),
+      form_userMail: new FormControl(),
+      form_userPassword: new FormControl(),
+      form_userRole: new FormControl(),
 
     });
 
     this.FormEditUser = this.FormEditBuilder.group({
-      formEdit_name: new UntypedFormControl(),
-      formEdit_phone: new UntypedFormControl(),
-      formEdit_mail: new UntypedFormControl(),
-      formEdit_password: new UntypedFormControl(),
+      formEdit_name: new FormControl(),
+      formEdit_phone: new FormControl(),
+      formEdit_mail: new FormControl(),
+      formEdit_password: new FormControl(),
      
     })
 

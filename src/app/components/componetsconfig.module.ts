@@ -11,7 +11,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShoppingCartComponent } from './Cart/shopping-cart.component';
 import { GamesAdministradorComponent } from './GamesAdministrador/games-administrador/games-administrador.component';
 import { UsersAdministratorComponent } from './UsersAdministrator/users-administrator/users-administrator.component';
-import { Router } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -44,4 +43,4 @@ import { Router } from '@angular/router';
   ]
 
 })
-export class ComponetsconfigModule { }
+export class ComponetsConfigModule { }

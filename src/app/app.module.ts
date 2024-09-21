@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http' 
 
 import { AppComponent } from './app.component';
-import { ComponetsconfigModule } from './components/componetsconfig.module';
+import { ComponetsConfigModule } from './components/componetsconfig.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { ComponetsconfigModule } from './components/componetsconfig.module';
     
   ],
   imports: [
-    ComponetsconfigModule,
+    ComponetsConfigModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
